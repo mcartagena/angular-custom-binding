@@ -37,4 +37,14 @@ export class CoursesComponent {
      description: 'Learn UI/UX design for designing mobile applications and websites, learn how to use figma and design interactive apps.'},
   ];
 
+  getTotalCourses(){
+    return this.courses.length;
+  }
+  getTotalFreeCourses(){
+    return this.courses.filter(course => course.type === 'Free').length;
+  }
+  getTotalPremiumCourses(){
+    return this.courses.filter(course => course.type === 'Premium').length;
+  }
+
 }
